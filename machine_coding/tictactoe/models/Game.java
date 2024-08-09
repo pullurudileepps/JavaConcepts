@@ -1,6 +1,6 @@
 package machine_coding.tictactoe.models;
 
-import javafx.util.Pair;
+import generics.intro_sol.Pair;
 import machine_coding.tictactoe.exceptions.BotCountExceededException;
 import machine_coding.tictactoe.exceptions.InvalidGameStateException;
 import machine_coding.tictactoe.strategies.check_for_win.OrderOneWinningStrategy;
@@ -65,14 +65,14 @@ public class Game {
     public void makeMove(){
         Player player = this.players.get(currentPlayerIdx);
         Pair<Integer, Integer> rowCol = player.makeMove(board);
-        while(!this.board.checkIfCellIsUnoccupied(rowCol.getKey(), rowCol.getValue())){
+        while(!this.board.checkIfCellIsUnoccupied(rowCol.getFirst(), rowCol.getSecond())){
             if(player instanceof HumanPlayer){
                 System.out.println("Please make a move on a different cell");
             }
             rowCol = player.makeMove(this.board);
         }
-        this.board.setPlayer(rowCol.getKey(), rowCol.getValue(), player);
-        Cell cell = this.board.getCell(rowCol.getKey(), rowCol.getValue());
+        this.board.setPlayer(rowCol.getFirst(), rowCol.getSecond(), player);
+        Cell cell = this.board.getCell(rowCol.getFirst(), rowCol.getSecond());
         Move move = new Move(player, cell);
         this.moves.add(move);
 

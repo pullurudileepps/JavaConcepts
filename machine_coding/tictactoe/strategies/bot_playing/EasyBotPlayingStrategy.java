@@ -1,6 +1,6 @@
 package machine_coding.tictactoe.strategies.bot_playing;
 
-import javafx.util.Pair;
+import generics.intro_sol.Pair;
 import machine_coding.tictactoe.exceptions.InvalidGameStateException;
 import machine_coding.tictactoe.models.Board;
 import machine_coding.tictactoe.models.Cell;

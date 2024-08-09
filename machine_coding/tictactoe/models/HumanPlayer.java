@@ -1,6 +1,7 @@
 package machine_coding.tictactoe.models;
 
-import javafx.util.Pair;
+
+import generics.intro_sol.Pair;
 
 import java.util.Scanner;
 

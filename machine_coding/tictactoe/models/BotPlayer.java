@@ -1,6 +1,6 @@
 package machine_coding.tictactoe.models;
 
-import javafx.util.Pair;
+import generics.intro_sol.Pair;
 import machine_coding.tictactoe.factories.BotPlayingStrategyFactory;
 import machine_coding.tictactoe.strategies.bot_playing.BotPlayingStrategy;
 import machine_coding.tictactoe.strategies.bot_playing.EasyBotPlayingStrategy;
